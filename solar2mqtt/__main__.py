@@ -1,5 +1,6 @@
 import argparse
 import asyncio
+import datetime
 import json
 import logging
 
@@ -36,6 +37,7 @@ class SolarParser():
             "count":int(values[0]),
             "voltage":float(values[1])/10.,
             "temperature":float(values[2])/10.,
+            "timestamp": datetime.datetime.now().isoformat(),
         }
         return r
 
