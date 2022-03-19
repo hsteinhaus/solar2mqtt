@@ -1,0 +1,9 @@
+version: "3"
+services:
+    solar2mqtt:
+        # You may also check out :stable release or `build: "."`, if :latest fails
+        build: "."
+        restart: always
+        network_mode: "host"
+        devices:
+            - "/dev/ttyUSB0:/dev/ttyUSB0"
